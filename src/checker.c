@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:47:34 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/10 01:32:46 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/10 06:22:37 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,29 @@ int	ft_str_isnumbr(char	*str)
 	return (0);
 }
 
-int	ft_check_double(char **args)
+int	ft_check_double(char **args, int len)
 {
+	int	*arr;
+	int	i;
+	int	j;
+
+	arr = ft_calloc(len, sizeof(int));
+	i = 0;
+	while (++i < len)
+		arr[i - 1] = ft_atoi(args[i]);
+	i = -1;
+	while (arr[++i])
+	{
+		j = i + 1;
+		while (arr[j])
+		{
+			if (arr[i] == arr[j++])
+				return (2);
+		}
+	}
+	return (0);
 }
+
 int	ft_checker(int len, char **args)
 {
 	int	i;
@@ -39,6 +59,9 @@ int	ft_checker(int len, char **args)
 			return (1);
 		i++;
 	}
-	ft_check_double(args);
+	if (ft_check_double(args, len) != 0)
+	{
+		return (2);
+	}
 	return (0);
 }

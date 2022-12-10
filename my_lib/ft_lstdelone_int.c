@@ -6,12 +6,11 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:29:40 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/09 05:30:42 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/10 06:22:01 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	ft_lstdelone_int(t_list_int *lst)
 {

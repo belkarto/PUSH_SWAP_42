@@ -6,11 +6,10 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:27:18 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/09 05:29:05 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/10 06:21:39 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
 
 void	ft_lstadd_back_int(t_list_int **lst, t_list_int *new)
 {
