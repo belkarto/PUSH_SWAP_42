@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:47:34 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/10 12:46:13 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/11 20:06:41 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,22 @@ int	ft_check_double(char **args, int len)
 	return (0);
 }
 
+int	ft_check_int(char **str)
+{
+	int		i;
+	long	num;
+
+	i = 1;
+	while (str[i])
+	{
+		num = ft_atol(str[i]);
+		if (num > 2147483647 || num < -2147483648)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 int	ft_checker(int len, char **args)
 {
 	int	i;
@@ -62,12 +78,9 @@ int	ft_checker(int len, char **args)
 			return (1);
 		i++;
 	}
-	if (ft_check_double(args, len) != 0)
-	{
+	if (ft_check_int(args) != 0)
 		return (2);
-	}
-	long k;
-	k = ft_atoi(args[1]);
-		printf("%ld", k);
+	if (ft_check_double(args, len) != 0)
+		return (3);
 	return (0);
 }
