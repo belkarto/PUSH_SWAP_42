@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:24:46 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/09 05:24:20 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/11 19:05:20 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int			ft_isprint(int c);
 int			ft_isascii(int c);
 int			ft_intlen(unsigned long nb);
 int			ft_atoi(const char *str);
+long		ft_atol(const char *str);
 size_t		ft_strlen(const char *s);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strchr(const char *s, int c);

@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:47:34 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/10 09:18:28 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/10 12:46:13 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,8 @@ int	ft_checker(int len, char **args)
 	{
 		return (2);
 	}
+	long k;
+	k = ft_atoi(args[1]);
+		printf("%ld", k);
 	return (0);
 }
