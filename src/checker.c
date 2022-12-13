@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:47:34 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/11 20:06:41 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/12 21:33:33 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_str_isnumbr(char	*str)
 
 	i = 0;
 	if ((str[i] == '-' && str[i + 1] != 0)
-		|| (str[i] == '+' && str[i + 1] != 0))
+			|| (str[i] == '+' && str[i + 1] != 0))
 		i++;
 	while (str[i])
 	{
@@ -39,10 +39,10 @@ int	ft_check_double(char **args, int len)
 	while (++i < len)
 		arr[i - 1] = ft_atoi(args[i]);
 	i = -1;
-	while (arr[++i])
+	while (++i < len - 1)
 	{
 		j = i + 1;
-		while (arr[j])
+		while (j < len - 1)
 		{
 			if (arr[i] == arr[j++])
 				return (2);
