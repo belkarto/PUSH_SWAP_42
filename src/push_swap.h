@@ -17,7 +17,7 @@
 
 t_list_int	*fill_lst(char **av);
 
-void		ft_printer(t_list_int *lst);\
+void	ft_print_stack(t_list_int *stack_a, t_list_int *stack_b);\
 void	ft_sa(t_list_int *stack);
 void	ft_sb(t_list_int *stack);
 void	ft_ss(t_list_int *stack_a, t_list_int *stack_b);
@@ -30,4 +30,5 @@ void	ft_rrb(t_list_int **stack);
 void	ft_rr(t_list_int **stack_a, t_list_int **stack_b);
 void	ft_rrr(t_list_int **stack_a, t_list_int **stack_b);
 int			ft_checker(int len, char **args);
+void    sort_three(t_list_int **stack);
 #endif

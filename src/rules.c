@@ -12,20 +12,31 @@
 
 #include "push_swap.h"
 
-void	ft_printer(t_list_int *lst)
+void	ft_print_stack(t_list_int *stack_a, t_list_int *stack_b)
 {
 	t_list_int	*list;
+	t_list_int	*list2;
 
-	list = lst;
-	if (list == NULL)
+	list = stack_a;
+	list2 = stack_b;
+	while (1)
 	{
-		ft_printf("empty list\n");
-		return ;
-	}
-	while (list != NULL)
-	{
-		ft_printf("%d\n", list->content);
-		list = list->next;
+		if (list == NULL)
+			ft_printf("  | ");
+		else
+		{
+			ft_printf("%d | ", list->content);
+			list = list->next;
+		}
+		if (list2 == NULL)
+			ft_printf(" \n");
+		else
+		{
+			ft_printf("%d\n", list2->content);
+			list2 = list2->next;
+		}
+		if (list == NULL && list2 == NULL)
+			return ;
 	}
 }
 
@@ -94,6 +105,8 @@ void	ft_ra(t_list_int **stack)
 	t_list_int	*lst;
 	t_list_int	*tmp;
 
+	if (*stack == NULL)
+		return ;
 	lst = *stack;
 	*stack = lst->next;
 	lst->next = NULL;
@@ -111,6 +124,8 @@ void	ft_rb(t_list_int **stack)
 	t_list_int	*lst;
 	t_list_int	*tmp;
 
+	if (*stack == NULL)
+		return ;
 	lst = *stack;
 	*stack = lst->next;
 	lst->next = NULL;
@@ -153,6 +168,8 @@ void	ft_rra(t_list_int **stack)
 	t_list_int	*tmp;
 
 	lst = *stack;
+	if (*stack == NULL)
+		return ;
 	while (lst->next->next != NULL)
 	{
 		lst = lst->next;
@@ -169,6 +186,8 @@ void	ft_rrb(t_list_int **stack)
 	t_list_int	*lst;
 	t_list_int	*tmp;
 
+	if (*stack == NULL)
+		return ;
 	lst = *stack;
 	while (lst->next->next != NULL)
 		lst = lst->next;

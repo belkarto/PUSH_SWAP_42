@@ -1,7 +1,8 @@
 NAME	= push_swap
 
 SRC		= src/push_swap.c src/fill_lst.c src/rules.c \
-		  src/checker.c
+		  src/checker.c src/three_args.c
+		  
 
 OBJEC	= $(SRC:.c=.o)
 LIBFT	= my_lib/libft.a

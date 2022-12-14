@@ -21,24 +21,8 @@ int	main(int ac, char **av)
 	if (ret != 0)
 		return (ft_printf("ERROR!\n"));
 	stack_a = fill_lst(av);
-	ft_pb(&stack_a, &stack_b);
-	ft_pb(&stack_a, &stack_b);
-	ft_pb(&stack_a, &stack_b);
-	ft_pb(&stack_a, &stack_b);
-	ft_pb(&stack_a, &stack_b);
-	ft_ra(&stack_a);
-	ft_rb(&stack_b);
-	ft_rra(&stack_a);
-	ft_rrb(&stack_b);
-	ft_pa(&stack_a, &stack_b);
-	ft_pa(&stack_a, &stack_b);
-	ft_pa(&stack_a, &stack_b);
-	ft_pa(&stack_a, &stack_b);
-	//ft_pa(&stack_a, &stack_b);
-	ft_printf("##### stack a #####\n");
-	ft_printer(stack_a);
-	ft_printf("#### stack b ####\n");
-	ft_printer(stack_b);
+	sort_three(&stack_a);
+	ft_print_stack(stack_a, stack_b);
 	return (0);
 }
  
