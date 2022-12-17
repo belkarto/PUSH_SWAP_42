@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:24:46 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/11 19:05:20 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/15 22:29:22 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,4 +96,5 @@ t_list_int	*ft_lstnew_int(int content);
 void		ft_lstadd_back_int(t_list_int **lst, t_list_int *new_node);
 void		ft_lstdelone_int(t_list_int *lst);
 void		ft_lstclear_int(t_list_int **lst);
+int			ft_lstsize_int(t_list_int *lst);
 #endif

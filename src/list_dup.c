@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   list_dup.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 20:54:09 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/15 21:27:29 by belkarto         ###   ########.fr       */
+/*   Created: 2022/12/17 08:12:33 by belkarto          #+#    #+#             */
+/*   Updated: 2022/12/17 08:41:21 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+t_list_int *ft_list_dup(t_list_int *list)
 {
-	t_list_int	*stack_a;
-	t_list_int	*stack_b;
-	int			ret;
-
-	ret = ft_checker(ac, av);
-	if (ret != 0)
-		return (ft_printf("ERROR!\n"));
-	stack_a = fill_lst(av);
-	stack_b = NULL;
-	sort_stack(&stack_a, &stack_b);
-	ft_print_stack(stack_a, stack_b);
-	return (0);
+	t_list_int	*tmp;
 }
- 
