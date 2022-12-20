@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:54:09 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/15 21:27:29 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/19 21:06:36 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -23,7 +23,6 @@ int	main(int ac, char **av)
 	stack_a = fill_lst(av);
 	stack_b = NULL;
 	sort_stack(&stack_a, &stack_b);
-	ft_print_stack(stack_a, stack_b);
 	return (0);
 }
  

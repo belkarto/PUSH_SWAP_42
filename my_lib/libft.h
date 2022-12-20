@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:24:46 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/15 22:29:22 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/17 14:46:10 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_list_int
 {
 	int					content;
 	struct s_list_int	*next;
+	int					count;
 }						t_list_int;
 
 //functions

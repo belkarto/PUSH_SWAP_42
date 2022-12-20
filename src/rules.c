@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 18:37:05 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/10 00:43:30 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/19 20:37:29 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	ft_pb(t_list_int **stack_a, t_list_int **stack_b)
 	*stack_a = head_a->next;
 	head_a->next = *stack_b;
 	*stack_b = head_a;
-	ft_printf("pa\n");
+	ft_printf("pb\n");
 }
 
 void	ft_pa(t_list_int **stack_a, t_list_int **stack_b)
@@ -97,7 +97,7 @@ void	ft_pa(t_list_int **stack_a, t_list_int **stack_b)
 	*stack_b = head_a->next;
 	head_a->next = *stack_a;
 	*stack_a = head_a;
-	ft_printf("pb\n");
+	ft_printf("pa\n");
 }
 
 void	ft_ra(t_list_int **stack)

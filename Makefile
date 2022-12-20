@@ -2,7 +2,8 @@ NAME	= push_swap
 
 SRC		= src/push_swap.c src/fill_lst.c src/rules.c \
 		  src/checker.c src/three_args.c src/sorting.c\
-		  src/five_args.c
+		  src/five_args.c src/get_the_smallest.c \
+		  src/lis.c
 		  
 
 OBJEC	= $(SRC:.c=.o)
