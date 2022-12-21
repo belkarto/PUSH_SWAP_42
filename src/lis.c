@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 08:54:17 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/19 21:07:30 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/20 23:54:41 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,5 @@ void	longest_incresing_subseq(t_list_int **stack_a, t_list_int **stack_b)
 		else
 			ft_ra(stack_a);
 	}
+	get_back_a(stack_a, stack_b);
 }
