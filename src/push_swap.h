@@ -6,15 +6,13 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:58:19 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/21 00:11:49 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:58:56 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
 # include "../my_lib/libft.h"
-
 
 typedef struct s_pos
 {
@@ -24,6 +22,7 @@ typedef struct s_pos
 	int	len_b;
 	int	pos_a;
 	int	pos_b;
+	int	moves;
 }				t_pos;
 
 typedef struct s_lis
@@ -60,5 +59,7 @@ int			*ft_get_arr(t_list_int *list, int len);
 void		longest_incresing_subseq(t_list_int **stack_a,
 				t_list_int **stack_b);
 void		get_back_a(t_list_int **stack_a, t_list_int **stack_b);
-
+void		mov_count_fir(t_pos **pos, int ind, int i);
+void		mov_count_last(t_pos **pos, int ind, int j);
+void		max_pos(t_pos **pos, int ind);
 #endif

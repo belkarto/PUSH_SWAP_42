@@ -6,11 +6,9 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 08:55:11 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/18 09:12:44 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:51:54 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 #include "push_swap.h"
 
 void	push_down(t_list_int ***stack, int rep)
@@ -75,4 +73,3 @@ void	get_the_smallest(t_list_int ***stack)
 	else
 		push_up(stack, num);
 }
-
