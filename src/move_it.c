@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 20:04:37 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/25 01:35:34 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/25 05:16:05 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,10 @@ void	move_it(t_pos pos, t_list_int **sta_a, t_list_int **sta_b)
 		}
 		else if (pos.pos_a == 0 && pos.pos_b > 0)
 		{
-			ft_rb(sta_b);
+			if (pos.pos_b == 1)
+				ft_sb(*sta_b);
+			else
+				ft_rb(sta_b);
 			pos.pos_b--;
 		}
 		else if (pos.pos_a > 0 && pos.pos_b < 0)

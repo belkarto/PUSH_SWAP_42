@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 01:29:58 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/25 01:37:27 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/25 05:06:22 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -44,7 +44,7 @@ void	counter(t_pos **pos, int pos_a, int pos_b)
 		b = pos_b;
 		moves += b;
 	}
-	if (moves < (**pos).moves)
+	if (moves <= (**pos).moves)
 	{
 		(**pos).pos_b = b;
 		(**pos).pos_a = a;
@@ -91,8 +91,9 @@ void	mov_count_last(t_pos **pos,  int ind, int j)
 	}
 	else
 	{
-		moves = ((**pos).len_b - j) + ind;	
-		if (moves < (**pos).moves)
+		moves = ((**pos).len_a - j) + ind;
+		//ft_printf("-- %d --\n", moves);
+		if (moves <= (**pos).moves)
 		{
 			(**pos).moves = moves;
 			(**pos).pos_a = j - (**pos).len_a;;
