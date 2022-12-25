@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:58:19 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/23 15:58:56 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/23 20:49:10 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,5 @@ void		get_back_a(t_list_int **stack_a, t_list_int **stack_b);
 void		mov_count_fir(t_pos **pos, int ind, int i);
 void		mov_count_last(t_pos **pos, int ind, int j);
 void		max_pos(t_pos **pos, int ind);
+void	move_it(t_pos pos, t_list_int **sta_a, t_list_int **sta_b);
 #endif

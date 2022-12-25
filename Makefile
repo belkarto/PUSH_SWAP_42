@@ -4,7 +4,8 @@ SRC		= src/push_swap.c src/fill_lst.c src/rules.c \
 		  src/rules1.c src/rules2.c \
 		  src/checker.c src/three_args.c src/sorting.c\
 		  src/five_args.c src/get_the_smallest.c \
-		  src/lis.c src/get_back_a.c src/positions.c
+		  src/lis.c src/get_back_a.c src/positions.c\
+		  src/move_it.c
 		  
 
 OBJEC	= $(SRC:.c=.o)
