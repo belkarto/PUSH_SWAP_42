@@ -46,10 +46,7 @@ void	move_it(t_pos pos, t_list_int **sta_a, t_list_int **sta_b)
 		}
 		else if (pos.pos_a == 0 && pos.pos_b > 0)
 		{
-			if (pos.pos_b == 1)
-				ft_sb(*sta_b);
-			else
-				ft_rb(sta_b);
+			ft_rb(sta_b);
 			pos.pos_b--;
 		}
 		else if (pos.pos_a > 0 && pos.pos_b < 0)

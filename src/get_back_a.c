@@ -11,6 +11,30 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
+int	ft_moves_top(t_pos **pos,int ind)
+{
+	int	b;
+	int	moves;
+
+	if (ind <= (**pos).len_b / 2)
+	{
+		b = ind;
+		moves = b;
+	}
+	else
+	{
+		b = ind - (**pos).len_b;
+		moves = b * -1;
+	}
+	if (moves < (**pos).moves || ind == 0)
+	{
+		(**pos).pos_b = b;
+		(**pos).moves = moves;
+		return (1);
+	}
+	return (0);
+}
+
 void	get_pos_a(t_pos *pos, int ind)
 {
 	int	i;
@@ -18,18 +42,19 @@ void	get_pos_a(t_pos *pos, int ind)
 
 	i = -1;
 	j = pos->len_a / 2;
-	if (pos->arr_a[0] > pos->arr_b[ind]
-			&& pos->arr_a[pos->len_a - 1] < pos->arr_b[ind])
+	if ((pos->arr_a[0] > pos->arr_b[ind]
+			&& pos->arr_a[pos->len_a - 1] < pos->arr_b[ind]))
 	{
-		pos->moves = 1 + ind;
-		pos->pos_a = 0;
-		pos->pos_b = ind;
-		return ;
+		if (ft_moves_top(&pos, ind) == 1)
+		{
+			pos->pos_a = 0;
+			return ;
+		}
 	}
 	while (++i <= j)
 	{
 		if (pos->arr_a[i] < pos->arr_b[ind] && pos->arr_a[i + 1] > pos->arr_b[ind])
-			return (mov_count_fir(&pos, ind, ++i));
+			return (mov_count_fir(&pos, ind, i + 1));
 	}
 	while (++j < pos->len_a - 1)
 	{
@@ -53,7 +78,7 @@ t_pos	get_best(t_list_int *stack_a, t_list_int *stack_b)
 	while (++i < pos.len_b)
 	{
 		get_pos_a(&pos, i);
-		//ft_printf("----------\na :%d\nb :%d\nmoves:%d\n----------\n", pos.pos_a, pos.pos_b, pos.moves);
+		//ft_printf("----------\na :%d\nb :%d\nmoves:%d\nlen_a:%d\nlen-b:%d\nindex:%d\n----------\n", pos.pos_a, pos.pos_b, pos.moves, pos.len_a, pos.len_b, i);
 	}
 	free(pos.arr_a);
 	free(pos.arr_b);
@@ -63,33 +88,15 @@ t_pos	get_best(t_list_int *stack_a, t_list_int *stack_b)
 void	get_back_a(t_list_int **stack_a, t_list_int **stack_b)
 {
 	t_pos	best_to_move;
+	int i;
 
-	while (ft_lstsize_int(*stack_b) != 0)
+	i = 0;
+	//ft_printf("---from here---\n");
+	while (ft_lstsize_int(*stack_b) != 0 )
 	{
-		//ft_print_stack(*stack_a, *stack_b);
 		best_to_move = get_best(*stack_a, *stack_b);
 		move_it(best_to_move, stack_a, stack_b);
-		/*ft_print_stack(*stack_a, *stack_b);
-		best_to_move = get_best(*stack_a, *stack_b);
-		move_it(best_to_move, stack_a, stack_b);
-		ft_print_stack(*stack_a, *stack_b);
-		best_to_move = get_best(*stack_a, *stack_b);
-		move_it(best_to_move, stack_a, stack_b);
-		ft_print_stack(*stack_a, *stack_b);
-		best_to_move = get_best(*stack_a, *stack_b);
-		move_it(best_to_move, stack_a, stack_b);
-		ft_print_stack(*stack_a, *stack_b);
-		best_to_move = get_best(*stack_a, *stack_b);
-		move_it(best_to_move, stack_a, stack_b);
-		ft_print_stack(*stack_a, *stack_b);
-		best_to_move = get_best(*stack_a, *stack_b);
-		move_it(best_to_move, stack_a, stack_b);
-		ft_print_stack(*stack_a, *stack_b);
-		best_to_move = get_best(*stack_a, *stack_b);
-		move_it(best_to_move, stack_a, stack_b);
-		ft_print_stack(*stack_a, *stack_b);
-		break ;*/
 	}
 	get_the_smallest(&stack_a);
-	ft_print_stack(*stack_a, *stack_b);
+	//ft_print_stack(*stack_a, *stack_b);
 }

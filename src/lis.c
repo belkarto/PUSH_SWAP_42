@@ -102,7 +102,7 @@ void	longest_incresing_subseq(t_list_int **stack_a, t_list_int **stack_b)
 	int			stack_len;
 
 	stack_len = ft_lstsize_int(*stack_a);
-	get_the_smallest(&stack_a);
+	//get_the_smallest(&stack_a);
 	arr = ft_get_arr(*stack_a, stack_len);
 	lis = ft_lis(arr, stack_len, &len);
 	while (len < stack_len)

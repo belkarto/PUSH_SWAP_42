@@ -16,7 +16,7 @@ all : $(NAME)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(LIBFT) $(OBJEC) 
-	$(CC) $(CFLAGS) $(OBJEC) my_lib/libft.a -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJEC) my_lib/libft.a -o $(NAME) -g
 
 $(LIBFT) :
 	@make -C my_lib

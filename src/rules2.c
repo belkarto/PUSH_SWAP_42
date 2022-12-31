@@ -41,17 +41,17 @@ void	ft_print_stack(t_list_int *stack_a, t_list_int *stack_b)
 	while (1)
 	{
 		if (list == NULL)
-			ft_printf("  | ");
+			ft_printf("   | ");
 		else
 		{
 			ft_printf("%d | ", list->content);
 			list = list->next;
 		}
 		if (list2 == NULL)
-			ft_printf(" \n");
+			ft_printf("\t\n");
 		else
 		{
-			ft_printf("%d\n", list2->content);
+			ft_printf("%d\t\n", list2->content);
 			list2 = list2->next;
 		}
 		if (list == NULL && list2 == NULL)

@@ -63,4 +63,5 @@ void		mov_count_fir(t_pos **pos, int ind, int i);
 void		mov_count_last(t_pos **pos, int ind, int j);
 void		max_pos(t_pos **pos, int ind);
 void	move_it(t_pos pos, t_list_int **sta_a, t_list_int **sta_b);
+void	ft_check_top(t_pos **pos, int b);
 #endif
