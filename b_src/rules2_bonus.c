@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:02:43 by belkarto          #+#    #+#             */
-/*   Updated: 2023/01/01 18:02:45 by belkarto         ###   ########.fr       */
+/*   Updated: 2023/01/01 21:57:05 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,3 @@ void	ft_print_stack(t_list_int *stack_a, t_list_int *stack_b)
 			return ;
 	}
 }
-

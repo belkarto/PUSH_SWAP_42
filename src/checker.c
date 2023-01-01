@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:47:34 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/23 15:50:57 by belkarto         ###   ########.fr       */
+/*   Updated: 2023/01/01 19:01:29 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_str_isnumbr(char	*str)
 	if ((str[i] == '-' && str[i + 1] != 0)
 		|| (str[i] == '+' && str[i + 1] != 0))
 		i++;
-    if (ft_strlen(str) == 0)
-        return (1);
+	if (ft_strlen(str) == 0)
+		return (1);
 	while (str[i])
 	{
 		if (ft_isdigit(str[i++]) == 0)

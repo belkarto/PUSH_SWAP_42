@@ -9,9 +9,7 @@
 /*   Updated: 2023/01/01 07:21:32 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "checker_bonus.h"
-
 
 int	main(int ac, char **av)
 {
@@ -24,8 +22,12 @@ int	main(int ac, char **av)
 		return (ft_printf("ERROR!\n"));
 	stack_a = fill_lst(av);
 	stack_b = NULL;
-    ft_is_sorted(stack_a);
-    ft_print_stack(stack_a, stack_b);
+	get_rules(&stack_a, &stack_b);
+	if (ft_is_sorted(stack_a) == 1)
+		ft_printf("ko\n");
+	else
+		ft_printf("ok\n");
+	ft_print_stack(stack_a, stack_b);
 	ft_lstclear_int(&stack_a);
 	return (0);
 }

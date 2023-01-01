@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/01 07:29:47 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "checker_bonus.h"
 
 t_list_int	*fill_lst(char **av)
@@ -35,8 +34,8 @@ int	ft_str_isnumbr(char	*str)
 	if ((str[i] == '-' && str[i + 1] != 0)
 		|| (str[i] == '+' && str[i + 1] != 0))
 		i++;
-    if (ft_strlen(str) == 0)
-        return (1);
+	if (ft_strlen(str) == 0)
+		return (1);
 	while (str[i])
 	{
 		if (ft_isdigit(str[i++]) == 0)

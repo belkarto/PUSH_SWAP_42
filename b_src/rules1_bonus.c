@@ -109,4 +109,3 @@ void	ft_rrr(t_list_int **stack_a, t_list_int **stack_b)
 	tmp_b->next = *stack_b;
 	*stack_b = tmp_b;
 }
-
