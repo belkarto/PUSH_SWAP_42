@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 00:47:34 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/23 15:50:57 by belkarto         ###   ########.fr       */
+/*   Created: 2023/01/01 07:29:45 by belkarto          #+#    #+#             */
+/*   Updated: 2023/01/01 07:29:47 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
+
+t_list_int	*fill_lst(char **av)
+{
+	int			i;
+	t_list_int	*lst;
+
+	i = 1;
+	lst = NULL;
+	while (av[i])
+	{
+		ft_lstadd_back_int(&lst, ft_lstnew_int(ft_atoi(av[i])));
+		i++;
+	}
+	return (lst);
+}
 
 int	ft_str_isnumbr(char	*str)
 {
