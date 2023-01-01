@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:58:19 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/23 20:49:10 by belkarto         ###   ########.fr       */
+/*   Updated: 2022/12/31 08:30:54 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,15 @@ void		get_back_a(t_list_int **stack_a, t_list_int **stack_b);
 void		mov_count_fir(t_pos **pos, int ind, int i);
 void		mov_count_last(t_pos **pos, int ind, int j);
 void		max_pos(t_pos **pos, int ind);
-void	move_it(t_pos pos, t_list_int **sta_a, t_list_int **sta_b);
-void	ft_check_top(t_pos **pos, int b);
+void		move_it(t_pos pos, t_list_int **sta_a, t_list_int **sta_b);
+void		ft_check_top(t_pos **pos, int b);
+int			get_b(int len_b, int b);
+int			ft_moves_fir(int a, int b);
+int			ft_moves_last(int a, int b);
+void		mov_count_fir(t_pos **pos, int ind, int i);
+void		mov_count_last(t_pos **pos, int ind, int j);
+int			max_ind(int *arr, int len);
+int			ft_moves_max(int a, int b);
+void		max_pos(t_pos **pos, int ind);
+void		ft_check_top(t_pos **pos, int i);
 #endif

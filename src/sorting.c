@@ -20,6 +20,13 @@ void	sort_stack(t_list_int **stack_a, t_list_int **stack_b)
 		sort_three(stack_a);
 	else if (len == 5)
 		five_args(stack_a, stack_b);
+	else if (len == 4)
+	{
+		get_the_smallest(&stack_a);
+		ft_pb(stack_a, stack_b);
+		sort_three(stack_a);
+		ft_pa(stack_a, stack_b);
+	}
 	else if (len > 5)
 		longest_incresing_subseq(stack_a, stack_b);
 	else

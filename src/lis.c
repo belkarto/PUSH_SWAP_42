@@ -78,6 +78,8 @@ int	*ft_lis(int *arr, int len, int *lis_len)
 		}
 	}
 	lis.lis = ft_long_inc_subseq(arr, lis, lis_len, len);
+	free(lis.length);
+	free(lis.sub_seq);
 	return (lis.lis);
 }
 
@@ -102,7 +104,6 @@ void	longest_incresing_subseq(t_list_int **stack_a, t_list_int **stack_b)
 	int			stack_len;
 
 	stack_len = ft_lstsize_int(*stack_a);
-	//get_the_smallest(&stack_a);
 	arr = ft_get_arr(*stack_a, stack_len);
 	lis = ft_lis(arr, stack_len, &len);
 	while (len < stack_len)
@@ -115,5 +116,7 @@ void	longest_incresing_subseq(t_list_int **stack_a, t_list_int **stack_b)
 		else
 			ft_ra(stack_a);
 	}
+	free(arr);
+	free(lis);
 	get_back_a(stack_a, stack_b);
 }

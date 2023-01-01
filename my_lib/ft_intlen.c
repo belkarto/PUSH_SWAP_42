@@ -17,7 +17,7 @@ int	ft_intlen(unsigned long nb)
 	int	len;
 
 	len = 0;
-	if (nb >= 0 && nb <= 9)
+	if (nb <= 9)
 		return (1);
 	while (nb > 0)
 	{

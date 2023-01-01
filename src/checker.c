@@ -48,6 +48,7 @@ int	ft_check_double(char **args, int len)
 				return (2);
 		}
 	}
+	free(arr);
 	return (0);
 }
 

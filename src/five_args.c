@@ -13,11 +13,6 @@
 
 void	five_args(t_list_int **stack_a, t_list_int **stack_b)
 {
-	t_list_int	*stack1;
-	t_list_int	*stack2;
-
-	stack1 = *stack_a;
-	stack2 = *stack_b;
 	get_the_smallest(&stack_a);
 	ft_pb(stack_a, stack_b);
 	get_the_smallest(&stack_a);
