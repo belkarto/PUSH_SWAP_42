@@ -16,6 +16,8 @@ void	ft_sa(t_list_int *stack)
 {
 	int	tmp;
 
+	if (stack == NULL)
+		return ;
 	tmp = stack->next->content;
 	stack->next->content = stack->content;
 	stack->content = tmp;
@@ -25,6 +27,8 @@ void	ft_sb(t_list_int *stack)
 {
 	int	tmp;
 
+	if (stack->next == NULL)
+		return ;
 	tmp = stack->next->content;
 	stack->next->content = stack->content;
 	stack->content = tmp;

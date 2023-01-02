@@ -19,8 +19,8 @@ int			ft_str_isnumbr(char	*str);
 int			ft_check_double(char **args, int len);
 int			ft_check_int(char **str);
 int			ft_checker(int len, char **args);
-int			ft_is_sorted(t_list_int *stack);
-void		get_rules(t_list_int **sta_a, t_list_int **sta_b);
+int			ft_is_sorted(t_list_int *stack_a, t_list_int *stack_b);
+char		**get_rules(void);
 void		ft_print_stack(t_list_int *stack_a, t_list_int *stack_b);
 void		ft_sa(t_list_int *stack);
 void		ft_sb(t_list_int *stack);
@@ -33,6 +33,7 @@ void		ft_rra(t_list_int **stack);
 void		ft_rrb(t_list_int **stack);
 void		ft_rr(t_list_int **stack_a, t_list_int **stack_b);
 void		ft_rrr(t_list_int **stack_a, t_list_int **stack_b);
+void		move_it(t_list_int **sta_a, t_list_int **sta_b, char **str);
 t_list_int	*fill_lst(char **av);
 
 #endif
