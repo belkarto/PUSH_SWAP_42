@@ -72,23 +72,6 @@ void	ft_rrb(t_list_int **stack)
 
 void	ft_rrr(t_list_int **stack_a, t_list_int **stack_b)
 {
-	t_list_int	*lst_a;
-	t_list_int	*tmp_a;
-	t_list_int	*lst_b;
-	t_list_int	*tmp_b;
-
-	lst_a = *stack_a;
-	while (lst_a->next->next != NULL)
-		lst_a = lst_a->next;
-	tmp_a = lst_a->next;
-	lst_a->next = NULL;
-	tmp_a->next = *stack_a;
-	*stack_a = tmp_a;
-	lst_b = *stack_b;
-	while (lst_b->next->next != NULL)
-		lst_b = lst_b->next;
-	tmp_b = lst_b->next;
-	lst_b->next = NULL;
-	tmp_b->next = *stack_b;
-	*stack_b = tmp_b;
+	ft_rra(stack_a);
+	ft_rrb(stack_b);
 }

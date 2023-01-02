@@ -14,27 +14,27 @@
 
 void	ft_move(t_list_int **sta_a, t_list_int **sta_b, char *s)
 {
-	if (ft_strncmp(s, "pa", ft_strlen(s)) == 0)
+	if (strncmp(s, "pa", strlen(s)) == 0)
 		ft_pa(sta_a, sta_b);
-	else if (ft_strncmp(s, "pb", ft_strlen(s)) == 0)
+	else if (strncmp(s, "pb", strlen(s)) == 0)
 		ft_pb(sta_a, sta_b);
-	else if (ft_strncmp(s, "rr", ft_strlen(s)) == 0)
+	else if (strncmp(s, "rr", strlen(s)) == 0)
 		ft_rr(sta_a, sta_b);
-	else if (ft_strncmp(s, "rrr", ft_strlen(s)) == 0)
+	else if (strncmp(s, "rrr", strlen(s)) == 0)
 		ft_rrr(sta_a, sta_b);
-	else if (ft_strncmp(s, "rra", ft_strlen(s)) == 0)
+	else if (strncmp(s, "rra", strlen(s)) == 0)
 		ft_rra(sta_a);
-	else if (ft_strncmp(s, "rrb", ft_strlen(s)) == 0)
+	else if (strncmp(s, "rrb", strlen(s)) == 0)
 		ft_rrb(sta_b);
-	else if (ft_strncmp(s, "ra", ft_strlen(s)) == 0)
+	else if (strncmp(s, "ra", strlen(s)) == 0)
 		ft_ra(sta_a);
-	else if (ft_strncmp(s, "rb", ft_strlen(s)) == 0)
+	else if (strncmp(s, "rb", strlen(s)) == 0)
 		ft_rb(sta_b);
-	else if (ft_strncmp(s, "sa", ft_strlen(s)) == 0)
+	else if (strncmp(s, "sa", strlen(s)) == 0)
 		ft_sa(*sta_a);
-	else if (ft_strncmp(s, "sb", ft_strlen(s)) == 0)
+	else if (strncmp(s, "sb", strlen(s)) == 0)
 		ft_sb(*sta_b);
-	else if (ft_strncmp(s, "ss", ft_strlen(s)) == 0)
+	else if (strncmp(s, "ss", strlen(s)) == 0)
 		ft_ss(*sta_a, *sta_b);
 }
 
@@ -45,16 +45,17 @@ char	**get_rules(void)
 	char	**str1;
 
 	str = NULL;
-	while (1)
+	s = get_next_line(0);
+	while (s != NULL)
 	{
-		s = get_next_line(1);
-		if (ft_strncmp(s, "\n", 1) == 0)
+		if (strncmp(s, "\n", strlen(s)) == 0)
 		{
 			free (s);
 			break ;
 		}
 		str = ft_strjoin_gnl(str, s);
 		free(s);
+		s = get_next_line(0);
 	}
 	str1 = ft_split(str, '\n');
 	free(str);
@@ -66,6 +67,8 @@ void	move_it(t_list_int **sta_a, t_list_int **sta_b, char **str)
 	int	i;
 
 	i = -1;
+	if (str == NULL)
+		return ;
 	while (str[++i])
 	{
 		ft_move(sta_a, sta_b, str[i]);
