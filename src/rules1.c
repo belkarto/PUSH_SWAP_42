@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:58:18 by belkarto          #+#    #+#             */
-/*   Updated: 2022/12/25 04:58:09 by belkarto         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:09:44 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -111,5 +111,5 @@ void	ft_rrr(t_list_int **stack_a, t_list_int **stack_b)
 	lst_b->next = NULL;
 	tmp_b->next = *stack_b;
 	*stack_b = tmp_b;
-	ft_printf("\rrrr\n");
+	ft_printf("rrr\n");
 }

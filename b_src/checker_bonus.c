@@ -6,7 +6,7 @@
 /*   By: belkarto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 06:40:00 by belkarto          #+#    #+#             */
-/*   Updated: 2023/01/01 07:21:32 by belkarto         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:11:15 by belkarto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "checker_bonus.h"
@@ -28,9 +28,9 @@ int	main(int ac, char **av)
 		str = get_rules();
 		move_it(&stack_a, &stack_b, str);
 		if (ft_is_sorted(stack_a, stack_b) == 1)
-			ft_printf("ko\n");
+			ft_printf("KO\n");
 		else
-			ft_printf("ok\n");
+			ft_printf("OK\n");
 		ft_lstclear_int(&stack_a);
 		ft_lstclear_int(&stack_b);
 	}
