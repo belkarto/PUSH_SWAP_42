@@ -42,7 +42,9 @@ sounds simple but you only allowed to use few moves.
     
 #### rrr : rra and rrb at the same time.
 
-##Ressources
+## Ressources
+
 *https://www.youtube.com/watch?v=E6us4nmXTHs
+
 *https://drive.google.com/file/d/1Xj3LHrwi2W9sIGluu-1rwVSJX1tMlPz_/view?usp=sharing
 
